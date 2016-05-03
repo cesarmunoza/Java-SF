@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+        <ui:composition template="./template.xhtml">
+            <ui:define name="top">
+                <h2>Confirmación de la información de la persona</h2>
+            </ui:define>
+
+            <ui:define name="content">
+                <p:panel>
+                    <h:panelGrid columns="2" columnClasses=".alinder-bold, normal">
+                        <h:outputText value="Nombre"/>
+                        <h:outputText value="#{registrationBean.nombre}"/>
+
+                        <h:outputText value="Apellido"/>
+                        <h:outputText value="#{registrationBean.apellido}"/>
+
+                        <h:outputText value="Edad"/>
+                        <h:outputText value="#{registrationBean.edad}"/>
+
+                        <h:outputText value="Email"/>
+                        <h:outputText value="#{registrationBean.email}"/>
+                        
+                        <h:outputText value="Fecha de nacimiento"/>
+                        <h:outputText value="#{registrationBean.fechaNacimiento}"/>
+                        
+                        <h:outputText value="Teléfono móvil"/>
+                        <h:outputText value="#{registrationBean.telefonoMovil}"/>
+                        
+                        <h:outputText value="Teléfono fijo"/>
+                        <h:outputText value="#{registrationBean.telefonoCasa}"/>
+                        
+                        <h:outputText value="Dirección"/>
+                        <h:outputText value="#{direccionBean.linea1}"/>
+                        
+                        <h:outputText value="Ciudad"/>
+                        <h:outputText value="#{direccionBean.ciudad}"/>
+                        
+                        <h:outputText value="Departamento"/>
+                        <h:outputText value="#{direccionBean.departamento}"/>
+
+                    </h:panelGrid>
+                </p:panel>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
